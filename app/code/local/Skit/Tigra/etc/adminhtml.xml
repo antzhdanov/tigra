@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <tools>
+                    <children>
+                        <tigra>
+                            <title>DB Migrations</title>
+                            <action>tigra/adminhtml_migrate</action>
+                            <sort_order>80</sort_order>
+                        </tigra>
+                    </children>
+                </tools>
+            </children>
+        </system>
+    </menu>
+</config>

@@ -1,0 +1,13 @@
+<form action="<?php echo $this->getUrl('tigra/adminhtml_migrate/' . $this->getDirection(), array('name' => $this->getName())) ?>" method="post">
+    <p>
+        <?php if ($this->getDirection() == 'update'): ?>
+            <?php echo $this->__('It appears that some migrations are missing. Do you want to upgrade anyway (not recommended)?') ?>
+        <?php else: ?>
+            <?php echo $this->__('It appears that some migrations are missing. Do you want to rollback anyway (not recommended)?') ?>
+        <?php endif ?>
+        </p>
+    <input name="form_key" type="hidden" value="<?php echo $this->getFormKey(); ?>" />
+	<input type="hidden" name="force" value="1" />
+    <input type="submit" value="<?php echo $this->__('Migrate anyway') ?>" />
+    <a href="<?php echo $this->getUrl('*/*/index') ?>" title="<?php echo $this->__('Cancel') ?>"><?php echo $this->__('Cancel') ?></a>
+</form>

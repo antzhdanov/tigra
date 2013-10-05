@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Skit_Tigra>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Skit_Tigra>
+    </modules>
+</config>

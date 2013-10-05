@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<layout>
+    <tigra_adminhtml_migrate_index>
+        <reference name="content">
+            <block type="tigra/adminhtml_migration" name="tigra" />
+        </reference>
+    </tigra_adminhtml_migrate_index>
+
+    <tigra_adminhtml_migrate_force>
+        <reference name="content">
+            <block type="adminhtml/template" name="tigra" template="tigra/force.phtml" />
+        </reference>
+    </tigra_adminhtml_migrate_force>
+</layout>

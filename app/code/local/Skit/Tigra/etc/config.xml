@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <modules>
+        <Skit_Tigra>
+            <version>0.1.0</version>
+        </Skit_Tigra>
+    </modules>
+
+    <admin>
+        <routers>
+            <tigra>
+                <use>admin</use>
+                <args>
+                    <module>Skit_Tigra</module>
+                    <frontName>migrate</frontName>
+                </args>
+            </tigra>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <tigra>
+                    <file>tigra.xml</file>
+                </tigra>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <global>
+        <blocks>
+            <tigra>
+                <class>Skit_Tigra_Block</class>
+            </tigra>
+        </blocks>
+        <helpers>
+            <tigra>
+                <class>Skit_Tigra_Helper</class>
+            </tigra>
+        </helpers>
+        <models>
+            <tigra>
+                <class>Skit_Tigra_Model</class>
+                <resourceModel>tigra_mysql4</resourceModel>
+            </tigra>
+            <tigra_mysql4>
+                <class>Skit_Tigra_Model_Mysql4</class>
+                <entities>
+                    <migration>
+                        <table>changelog</table>
+                    </migration>
+                </entities>
+            </tigra_mysql4>
+        </models>
+        <resources>
+            <tigra_setup>
+                <setup>
+                    <module>Skit_Tigra</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </tigra_setup>
+            <tigra_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </tigra_write>
+            <tigra_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </tigra_read>
+        </resources>
+    </global>
+</config>
